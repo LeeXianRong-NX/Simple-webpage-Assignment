@@ -103,7 +103,7 @@ main {
   border-bottom: 1.5px solid var(--grey-color);
 }
 
-.cards-display {
+.cards-grid {
   padding: 0 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -116,7 +116,7 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 1.2rem;
 
@@ -129,7 +129,7 @@ main {
   width: 100%;
 } */
 
-.card__id {
+.card__info {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
