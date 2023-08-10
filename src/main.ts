@@ -100,7 +100,7 @@ function displayCards(cards: Array<Card>): void {
     // Create 'card' div
     const cardDiv: HTMLDivElement = document.createElement("div");
     cardDiv.classList.add("card");
-
+    
     // Create div children -- image, info, name, description
     const cardImage: HTMLImageElement = document.createElement("img");
     cardImage.classList.add("card__image");
@@ -117,9 +117,15 @@ function displayCards(cards: Array<Card>): void {
     cardName.classList.add("card__name");
     cardName.innerText = card.name;
 
-    const cardDescription: HTMLParagraphElement = document.createElement("p");
+    const cardDescription: HTMLDivElement = document.createElement("div");
+    const paragraphs: Array<string> = card.description.split("\n");
+    for (let p of paragraphs) {
+        const para: HTMLParagraphElement = document.createElement("p");
+        para.innerText = p;
+        cardDescription.appendChild(para);
+    }
+    
     cardDescription.classList.add("card__description");
-    cardDescription.innerText = card.description;
 
     // Append children to div
     cardDiv.appendChild(cardImage);
