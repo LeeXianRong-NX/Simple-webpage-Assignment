@@ -25,13 +25,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.outline--red {
-  outline: 1px solid red;
-}
-.outline--blue {
-  outline: 1px solid blue;
-}
-
 *,
 *::before,
 *::after {
@@ -39,10 +32,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* html {
-  font-size: 1rem;
-} */
 
 body {
   font-size: 1.1em;
@@ -59,7 +48,6 @@ select {
   font-family: inherit;
   font-size: inherit;
 }
-
 
 /* Header styles */
 header {
