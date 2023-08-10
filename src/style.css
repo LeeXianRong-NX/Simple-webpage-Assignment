@@ -25,28 +25,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.outline--red {
-  outline: 1px solid red;
-}
-
-.outline--blue {
-  outline: 1px solid blue;
-}
-
-.outline--black {
-  outline: 1px solid black;
-}
-
-html {
-  font-size: 1em;
-}
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
 }
 
 img {
@@ -61,8 +49,11 @@ select {
   font-size: inherit;
 }
 
-/* Header styles */
+p {
+  font-size: 1.1rem;
+}
 
+/* Header styles */
 header {
   margin: calc(var(--section__spacing) * 2) auto calc(var(--section__spacing) * 2);
   display: flex;
@@ -73,20 +64,21 @@ header {
 }
 
 h1 {
+  font-size: 2.55rem;
   text-align: center;
   line-height: 1.125;
 }
 
 .banner {
   width: 100dvw;
+  height: auto;
   object-position: center;
 }
 
 /* Content styles */
-
 main {
   width: 70%;
-  /* max-width: 1200px; */
+  height: fit-content;
   margin: var(--section__spacing) auto calc(var(--section__spacing) * 2);
 }
 
@@ -112,22 +104,17 @@ main {
 }
 
 /* Card info styles */
-
 .card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.2rem;
-
-  & > * {
-    width: 100%;
-  }
 }
 
-/* .card > * {
+.card > * {
   width: 100%;
-} */
+}
 
 .card__info {
   display: flex;
@@ -141,5 +128,6 @@ main {
 }
 
 .card__name {
+  font-size: 1.55rem;
   font-weight: 500;
 }

@@ -117,7 +117,7 @@ function displayCards(cards: Array<Card>): void {
     cardName.classList.add("card__name");
     cardName.innerText = card.name;
 
-    const cardDescription: HTMLDivElement = document.createElement("div");
+    const cardDescription: HTMLParagraphElement = document.createElement("p");
     cardDescription.classList.add("card__description");
     cardDescription.innerText = card.description;
 
