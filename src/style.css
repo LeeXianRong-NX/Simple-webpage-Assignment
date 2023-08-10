@@ -25,6 +25,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.outline--red {
+  outline: 1px solid red;
+}
+.outline--blue {
+  outline: 1px solid blue;
+}
+
 *,
 *::before,
 *::after {
@@ -33,8 +40,12 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   font-size: 1rem;
+} */
+
+body {
+  font-size: 1.1em;
 }
 
 img {
@@ -49,9 +60,6 @@ select {
   font-size: inherit;
 }
 
-p {
-  font-size: 1.1rem;
-}
 
 /* Header styles */
 header {
@@ -64,7 +72,7 @@ header {
 }
 
 h1 {
-  font-size: 2.55rem;
+  font-size: 2.5rem;
   text-align: center;
   line-height: 1.125;
 }
@@ -96,7 +104,8 @@ main {
 }
 
 .cards-grid {
-  padding: 0 2.5rem;
+  width: 90%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: max-content;
@@ -107,8 +116,6 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   gap: 1.2rem;
 }
 
@@ -116,18 +123,68 @@ main {
   width: 100%;
 }
 
+.card__image {
+  max-width: 500px;
+  height: auto;
+  flex: 0 1 auto;
+}
+
 .card__info {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-}
-
-.card__name,
-.card__description {
-  text-align: justify;
+  font-size: 0.95rem;
 }
 
 .card__name {
   font-size: 1.55rem;
   font-weight: 500;
+}
+.card__description {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 450px) {
+  body {
+    font-size: 0.95em;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .card__info {
+    font-size: 0.75rem;
+  }
+
+  .card__name {
+    font-size: 1.35rem;
+  }
+
+  .card__description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  .card__info {
+    font-size: 1.2rem;
+  }
+
+  .card__name {
+    font-size: 1.75rem;
+  }
+
+  .card__description {
+    font-size: 1.5rem;
+    line-height: 1.15;
+  }
 }
