@@ -8,6 +8,8 @@
   --section__spacing: 1.5rem;
   --divider__spacing: 1.25rem;
 
+  --content__max-width: 1200px;
+
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -51,7 +53,7 @@ select {
 
 /* Header styles */
 header {
-  margin: calc(var(--section__spacing) * 2) auto calc(var(--section__spacing) * 2);
+  padding: calc(var(--section__spacing) * 2) 0 calc(var(--section__spacing) * 2);
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -60,22 +62,31 @@ header {
 }
 
 h1 {
+  max-width: var(--content__max-width);
   font-size: 2.5rem;
   text-align: center;
   line-height: 1.125;
 }
 
 .banner {
-  width: 100dvw;
+  width: 100%;
+  max-width: var(--content__max-width);
   height: auto;
   object-position: center;
 }
 
 /* Content styles */
 main {
-  width: 70%;
-  height: fit-content;
-  margin: var(--section__spacing) auto calc(var(--section__spacing) * 2);
+  padding: var(--section__spacing) 0 calc(var(--section__spacing) * 2);
+}
+
+.content {
+  max-width: var(--content__max-width);
+  margin: auto;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .sort {
