@@ -124,7 +124,6 @@ function displayCards(cards: Array<Card>): void {
         para.innerText = p;
         cardDescription.appendChild(para);
     }
-    
     cardDescription.classList.add("card__description");
 
     // Append children to div
